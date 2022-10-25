@@ -19,7 +19,7 @@ upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~", " "];
 
 
-// Assignment Code
+// Assignment Code 
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input

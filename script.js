@@ -1,9 +1,10 @@
 // Global Variables 
-var confirm;
+var input;
 var confirmNumber;
 var confirmLowercase;
 var confirmUppercase;
 var confirmCharacter;
+var choices;
 
 // Objects & Values
 // Numbers
@@ -33,3 +34,76 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// Asks user for input
+input = parseInt(prompt("How many characters would you like your password to have? Must be between 8 and 128"));
+
+// if statement 
+if (!input){
+  alert("You must enter a value");
+
+} else if (input < 8 || input > 128){
+  input = parseInt(prompt("You must choose between 8 and 128"));
+
+} else {
+  confirmNumber = confirm("Will this contain numbers?");
+  confirmLowercase = confirm("Will this contain Lowercase letters?");
+  confirmUppercase = confirm("Will this contain Uppercase letters?");
+  confirmCharacter = confirm("Will this contain special characters? ie: !@#$%^&*()");
+};
+// what to do w/ 4 negative options
+if (!confirmNumber && !confirmLowercase && !confirmUppercase && !confirmCharacter) {
+  choices = alert("You must choose a criteria!");
+}
+// what to do w/ 4 positive options
+ else if (confirmNumber && confirmLowercase && confirmUppercase && confirmCharacter) {
+  choices = number.concat(lowerCase, upperCase, character);
+}
+//what to do w/ 3 positive options  
+  else if (confirmNumber && confirmLowercase && confirmUppercase) {
+  choices = number.concat(lowerCase, upperCase);
+
+ } else if (confirmNumber && confirmLowercase && confirmCharacter) {
+  choices = number.concat(lowerCase, character);
+
+ } else if (confirmNumber && confirmUppercase && confirmCharacter) {
+  choices = number.concat(upperCase, character);
+
+ } else if (confirmLowercase && confirmUppercase && confirmCharacter) {
+  choices = lowerCase.concat(upperCase, character);
+ }
+
+//  what to do w/ 2 positive options
+else if (confirmNumber && confirmLowercase){
+  choices = number.concat(lowerCase);
+
+} else if (confirmNumber && confirmUppercase){
+  choices = number.concat(upperCase);
+
+} else if (confirmNumber && confirmCharacter) {
+  choices = number.concat(character);
+
+} else if (confirmLowercase && confirmUppercase){
+  choices = lowerCase.concat(upperCase);
+
+} else if (confirmLowercase && confirmCharacter){
+  choices = lowerCase.concat(character);
+
+} else if (confirmUppercase && confirmCharacter){
+  choices = upperCase.concat(character);
+}
+
+// what to do w/ 1 positive option
+else if (confirmNumber) {
+  choices = number;
+
+} else if(confirmLowercase) {
+  choices = lowerCase;
+
+} else if (confirmUppercase) {
+  choices = upperCase;
+
+} else if (confirmCharacter) {
+  choices = character;
+};

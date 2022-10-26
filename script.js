@@ -35,7 +35,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
+// function generatePassword() {
 // Asks user for input
 input = parseInt(prompt("How many characters would you like your password to have? Must be between 8 and 128"));
 
@@ -107,3 +107,17 @@ else if (confirmNumber) {
 } else if (confirmCharacter) {
   choices = character;
 };
+
+// creates a empty string for password based off what user selects?
+var password = "";
+
+// for loop; creates a var userChoice which equals the user choice math.floor (down to nearest whole number) x Math.random (random number 0-1) and multiples it by the length the user selected their password to be. After this we take the created empty variable of password and push userChoice to it
+for (var i = 0; i < input; i++) {
+  var userChoice = choices[Math.floor(Math.random() * choices.length)];
+password.push(userChoice);
+}
+
+
+// }
+
+

@@ -6,8 +6,9 @@ var confirmUppercase;
 var confirmCharacter;
 var choices;
 
-// Objects & Values
+// Arrays
 // Numbers
+// could also use .split ("") to avoid having to put everything into it's own string
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
 // Lower case
@@ -46,6 +47,7 @@ function generatePassword() {
 
   } else if (input < 8 || input > 128) {
     input = parseInt(prompt("You must choose between 8 and 128"));
+    // try putting restart function here
 
   } else {
     confirmNumber = confirm("Will this contain numbers?");
@@ -113,6 +115,7 @@ function generatePassword() {
   var password = [];
 
   // for loop; takes the information that the user selected and generates a random password string. password text is what the user selected choices is the random generated number. password is the password variable push adds what the user entered to the randomly generated password
+  // https://www.samanthaming.com/tidbits/15-4-ways-to-combine-strings/
   for (var i = 0; i < input; i++) {
     passwordText = choices[Math.floor(Math.random() * choices.length)];
     password.push(passwordText);
@@ -120,6 +123,7 @@ function generatePassword() {
 
 
   // password text = password.join w/ empty string joins the randomly generated password into the var password 
+  // https://www.samanthaming.com/tidbits/15-4-ways-to-combine-strings/
   passwordText = password.join("");
   UserInput(passwordText);
   return passwordText;

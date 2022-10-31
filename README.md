@@ -26,6 +26,7 @@ N/A
 -Choose character length between 8 and 128
 -Answer the 4 questions that will be asked (OK = yes; cancel = no)
 
+![alt text](assets/password-generator.png)
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
